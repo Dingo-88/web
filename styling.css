@@ -320,3 +320,7 @@ footer div {
   opacity: 1;
   transform: scale(1);
 }
+
+a:hover {
+  text-decoration: underline;
+}

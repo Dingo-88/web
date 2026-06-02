@@ -314,3 +314,38 @@ footer div {
   opacity: 1;
   transform: scale(1);
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#search {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+}
+
+#search-results {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 250px;
+  background: #423232;
+  border-radius: 8px;
+  z-index: 2000;
+}
+
+#search-results a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+#search-results a:hover {
+  background: #e8aa00;
+}

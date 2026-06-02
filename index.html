@@ -375,6 +375,22 @@
        <marquee scrollamount=7.5>&copy; 2026 DingoWatch — All Rights Reserved — A Website Since 22 June 2024 — DingoWatch Since 17 August 2025 - Made in Australia</marquee>
      </footer>
      <script>
+document.getElementById("search").addEventListener("keyup", function() {
+  let filter = this.value.toLowerCase();
+  let sections = document.querySelectorAll("section");
+
+  sections.forEach(section => {
+    let text = section.textContent.toLowerCase();
+
+    if (text.includes(filter) || filter === "") {
+      section.style.display = "";
+    } else {
+      section.style.display = "none";
+    }
+  });
+});
+</script>
+     <script>
      const galleryItems = document.querySelectorAll('.gallery-item');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');

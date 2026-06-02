@@ -375,6 +375,32 @@
        <marquee scrollamount=7.5>&copy; 2026 DingoWatch — All Rights Reserved — A Website Since 22 June 2024 — DingoWatch Since 17 August 2025 - Made in Australia</marquee>
      </footer>
      <script>
+const dingoFacts = [
+  "Dingoes can run at speeds of up to 60 km/h.",
+  "Dingoes can jump around 2 metres high.",
+  "Dingoes have lived in Australia for thousands of years.",
+  "Dingoes rarely bark like domestic dogs.",
+  "Dingoes help control feral cat and fox populations.",
+  "Dingoes can rotate their wrists more than most dogs.",
+  "Dingoes have very little natural body odour.",
+  "Male dingoes help raise and teach their pups.",
+  "Some dingoes can successfully climb trees.",
+  "Dingoes can travel up to 40 km in a single day."
+];
+
+const factElement = document.getElementById("dingoFact");
+const button = document.getElementById("newFactBtn");
+
+function showRandomFact() {
+  const randomIndex = Math.floor(Math.random() * dingoFacts.length);
+  factElement.textContent = dingoFacts[randomIndex];
+}
+
+showRandomFact();
+
+button.addEventListener("click", showRandomFact);
+</script>
+     <script>
      const galleryItems = document.querySelectorAll('.gallery-item');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');

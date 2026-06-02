@@ -314,3 +314,36 @@ footer div {
   opacity: 1;
   transform: scale(1);
 }
+
+.sidebar {
+  background: #423232;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.sidebar h3 {
+  color: #e8aa00;
+  margin-top: 0;
+}
+
+#newFactBtn {
+  background: #e8aa00;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#newFactBtn:hover {
+  opacity: 0.9;
+}
+
+.sidebar {
+  position: sticky;
+  top: 100px;
+}

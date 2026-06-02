@@ -391,6 +391,38 @@
        <marquee scrollamount=7.5>&copy; 2026 DingoWatch — All Rights Reserved — A Website Since 22 June 2024 — DingoWatch Since 17 August 2025 - Made in Australia</marquee>
      </footer>
      <script>
+const search = document.getElementById("search");
+const results = document.getElementById("search-results");
+
+const pages = [
+  { title: "About Dingoes", link: "#writing" },
+  { title: "Fun Facts", link: "#writing" },
+  { title: "The Dingo Poem", link: "#writing" },
+  { title: "Save The Dingoes", link: "#writing" },
+  { title: "Art Gallery", link: "#art" },
+  { title: "News and Updates", link: "#news" },
+  { title: "Resources & Links", link: "#resources" },
+  { title: "Fun with Dingoes", link: "#fun" },
+  { title: "Help Out", link: "#help" }
+];
+
+search.addEventListener("keyup", () => {
+  const term = search.value.toLowerCase();
+
+  results.innerHTML = "";
+
+  if (term === "") return;
+
+  pages.forEach(page => {
+    if (page.title.toLowerCase().includes(term)) {
+      results.innerHTML += `
+        <a href="${page.link}">${page.title}</a>
+      `;
+    }
+  });
+});
+</script>
+     <script>
 document.getElementById("search").addEventListener("keyup", function() {
   let filter = this.value.toLowerCase();
   let sections = document.querySelectorAll("section");
